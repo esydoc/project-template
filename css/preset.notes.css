@@ -17,18 +17,18 @@
 	clear: both;
 }
 
-/* Hide visually and from screen readers */
+/* Hide element visually and from screen readers (Maintains layout) */
+.--invisible {
+	visibility: hidden;
+}
+
+/* Hide element visually and from screen readers (Changes layout) */
 .--hidden,
 [hidden] {
 	display: none !important;
 }
 
-/* Hide visually and from screen readers but maintain layout */
-.--invisible {
-	visibility: hidden;
-}
-
-/* Hide visually but not from screen readers */
+/* Hide element visually but show to screen readers (Changes layout) */
 .--visually-hidden {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
@@ -51,6 +51,22 @@
 	width: auto;
 }
 
+/* Make element unselectable */
+.--forced-unselectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Force element to be selectable with one click */
+.--forced-selectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 /* MEDIA QUERIES */
 
 /* Print Style */
@@ -69,21 +85,21 @@
 	(min-resolution: 1.25dppx),
 	(min-resolution: 120dpi),
 	(-webkit-min-device-pixel-ratio: 1.25) {
-		/* Style Adjustments for High Resolution Devices */
+	/* Style Adjustments for High Resolution Devices */
 }
 
 /* Per Screen Width Styles */
 @media only screen and (min-width: 32rem) {
-	/* Style Adjustments for Screens up to 320px */ 
+	/* Style Adjustments for Screens up to 320px */
 }
 @media only screen and (min-width: 60rem) {
-	/* Style Adjustments for Screens up to 600px */ 
+	/* Style Adjustments for Screens up to 600px */
 }
 @media only screen and (min-width: 76.8rem) {
-	/* Style Adjustments for Screens up to 768px */ 
+	/* Style Adjustments for Screens up to 768px */
 }
 @media only screen and (min-width: 99.2rem) {
-	/* Style Adjustments for Screens up to 992px */ 
+	/* Style Adjustments for Screens up to 992px */
 }
 @media only screen and (min-width: 120rem) {
 	/* Style Adjustments for Screens up to 1200px */
@@ -92,17 +108,17 @@
 /* HOVER EVENTS */
 
 element:link {
-	Style Adjustments for Unvisited
+	/* Style Adjustments if Unvisited */
 }
 
 element:visited {
-	Style Adjustments for Visited
+	/* Style Adjustments if Visited */
 }
 
 element:hover {
-	Style Adjustments for Hovered
+	/* Style Adjustments if Hovered */
 }
 
 element:active {
-	Style Adjustments for Clicked
+	/* Style Adjustments if Clicked */
 }

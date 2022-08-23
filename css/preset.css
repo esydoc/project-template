@@ -16,13 +16,13 @@
 	clear: both;
 }
 
+.--invisible {
+	visibility: hidden;
+}
+
 .--hidden,
 [hidden] {
 	display: none !important;
-}
-
-.--invisible {
-	visibility: hidden;
 }
 
 .--visually-hidden {
@@ -44,6 +44,20 @@
 	position: static;
 	white-space: inherit;
 	width: auto;
+}
+
+.--forced-unselectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.--forced-selectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* MEDIA QUERIES */
